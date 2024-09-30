@@ -1,0 +1,44 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "perfil slide"
+    "perfil principal"
+    "perfil rodape"
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+}
+
+.perfil {
+    grid-area: perfil;
+}
+
+.carrossel {
+    grid-area: slide;
+}
+
+.projetos {
+    grid-area: principal;
+}
+
+.rodape {
+    grid-area: rodape;
+}
+
+@media (max-width: 768px) {
+    body{
+        display: grid;
+        grid-template-columns: 30vw 8fr;
+    }
+}
+
+
+@media (max-width: 420px) {
+    body{
+        display: block;
+}
+}

@@ -1,0 +1,16 @@
+.botao-download__imagem {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    width: 32px;
+    height: 32px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #19485f;
+}
+
+.botao-download__imagem:hover {
+    cursor: pointer;
+    
+}

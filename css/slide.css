@@ -1,0 +1,9 @@
+.carrossel{
+    display: none;
+}
+
+@media (max-width: 420px) {
+    .carrossel{
+        display: none;
+    }
+}

@@ -1,0 +1,124 @@
+.protejos__lista {
+    position: sticky;
+    top: 0rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: 0.5rem 2rem;
+    column-gap: 2rem;
+    background-color: var(--cor-de-base);
+    border: 1px solid var(--cor-contorno);
+    white-space: nowrap;
+}
+
+.protejos__lista-item a {
+    color: black;
+}
+
+.protejos__lista-item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*AQUI INICIA A DIVISÃO DOS PROJETOS*/
+
+.projetos-Javascript {
+    display: grid;
+    margin: 0 auto;
+    border: 2px solid var(--cor-contorno);
+    border-radius: 10px;
+    /*Criando 5 linhas. Linhas 1 e 5 são apenas espaçamentos. Linha 2 é título, linha 3 é descrição e linha 4, botões*/
+    grid-template-rows: 12px 2rem 1fr 48px 48px 12px;
+    /*140px está relacionado à 128px + 12px de margem*/
+    grid-template-columns: 12px 140px 1fr 12px;
+}
+
+.projetos-Javascript__imagem {
+    grid-area: 3 / 2 / 3 / 4;
+    width: 128px;
+    height: 128px;
+    border: 1px solid var(--cor-contorno);
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 4px 4px 4px var(--cor-contorno);
+}
+
+.projetos-Javascript__metodos {
+    grid-area: 4 / 2 / 6 / 3;
+    padding: 0 0.5rem;
+}
+
+.projetos-Javascript__titulo {
+    grid-area: 2 / 3 / 3 / 4;
+    padding: 0.5rem;
+}
+
+.projetos-Javascript__descricao {
+    grid-area: 3 / 3 / 4 / 4;
+    padding: 0.5rem;
+}
+
+.projetos-Javascript__link--github {
+    grid-area: 4 / 3 / 5 / 4;
+    height: 24px;
+}
+.projetos-Javascript__link--vercel {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.projetos-Javascript a {
+    background: var(--cor-botao);
+    color: var(--cor-texto-botao);
+    border: none;
+    border-radius: 4px;
+    height: 24px;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+    width: 102px;
+}
+
+.projetos-Javascript a:hover {
+    background: var(--cor-texto-botao);
+    color: var(--cor-botao);
+    transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+    .protejos__lista {
+        overflow-x: scroll;
+    }
+
+    .projetos-Javascript {
+    grid-template-rows: 12px 2rem 1fr 48px 48px 48px 12px;
+    grid-template-columns: 12px 90% 12px;
+    }
+    
+    .projetos-Javascript__imagem {
+        display: none;
+    }
+
+    .projetos-Javascript__titulo {
+        font-size: 16px;
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+    .projetos-Javascript__descricao {
+        grid-area: 3 / 2 / 4 / 4;
+    }
+
+    .projetos-Javascript__metodos {
+        grid-area: 4 / 2 / 5 / 3;
+        padding: 0.5rem;
+    }
+
+    .projetos-Javascript__link--github	{
+        grid-area: 5 / 2 / 6 / 3;
+        margin: 0.5rem;
+    }
+    .projetos-Javascript__link--vercel	{
+        grid-area: 6 / 2 / 7 / 3;
+        margin: 0.5rem;
+    }
+
+}

@@ -1,0 +1,11 @@
+.conteudo-principal__titulo {
+    margin: 1rem 0;
+}
+
+
+@media (max-width: 420px) {
+    .conteudo-principal{
+        padding: 0;
+    }
+}
+

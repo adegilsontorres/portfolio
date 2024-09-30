@@ -1,0 +1,34 @@
+
+.cabecalho{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--cor-contorno);
+    background-color: var(--cor-de-base);
+
+    height: 4rem;
+    width: 100hw;
+    font-size: 12px;
+    flex-grow: 1;
+}
+
+.carrossel{
+    width: 100%;
+}
+
+.carrossel__imagem{
+    width: 100%;
+}
+
+@media (max-width: 420px) {
+    .cabecalho{
+    height: 2rem;
+    width: 100%;
+    }
+    .titulo-principal{
+        font-size: 14px;
+        white-space: nowrap;        
+    }
+    
+}
